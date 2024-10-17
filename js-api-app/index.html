@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simula</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body class="gradient">
+    <div class="header">
+        <a href="/"><img src="assets/simula logo.svg" class="simula-logo" alt="simula logo"></a>
+        <div class="header-right">
+            <a href="astro-signs.html" class="astrology-link">Signs</a>
+            <a href="#tarotstrologers" class="astrology-link">Taro-t Sagostrologers</a>
+            <a href="#book-reading" class="reading-link">Book a Reading</a>
+        </div>
+    </div>
+    <div>
+        <h1>Start Your Spirituality Journey with Astrology and Tarot with Simula</h1>
+    </div>
+    <div class="icons-center">
+        <img src="assets/reshot-icon-planets-XUDLT78MPH.svg" alt="saturn illustration" class="saturn-planet" />
+        <img src="assets/reshot-icon-moon-and-star-N5VKD379AF-ba6c9.svg" alt="moon and three stars" class="moon-and-stars"/>
+    </div>
+    <div class="buttons-center">
+        <a href="#chart-section"><button type="button" class="button-design chart-button" id="button-show">Birth Chart</button></a>
+        <a href="#card-box"><button type="button" class="button-design card-button" id="tarot-button">Random Tarot Card</button></a>
+    </div><br>
+    <div class="show-content" id ="chart-section">
+        <div id="chart-widget-show" class="hide">
+            <h2 class="chart-heading">Get Your Birth Chart Here!</h2>
+            <p class="birth-chart-text">Your data is secure!</p>
+            <div class="astro-widget">
+                <script>
+                    (()=>{"use strict";var t="luna";"#".concat("luna-widget","--auto-wrapper"),function(n,c){window[t]=window[t]||function(){(window[t].q=window[t].q||[]).push(arguments)};var i=window.document.createElement("script");i.async=!0,i.src="https://widget.lunaastrology.com/js/dist/widget.js",n.replaceWith(i)}(document.currentScript)})();
+                luna('init', {"theme":"solar"});</script>
+                
+        </div>
+    <div id="card-box" class="random-show hide">
+        </div>
+    </div>
+    <section id="tarotstrologers">
+        <h2>Meet our Taro-t Sagostrologers!</h2><br><br>
+        <div class="tarot-bios">
+            <div class="bio-cards-2">
+                <img src="assets/hawkeyedo cr textlessposter.png" alt="kate bishop"/>
+                <h3>Hawkeyedo</h3><br>
+                <p>Seer of Futures</p><br>
+                <a href="#book-reading" class="button-bio">Talk to Her</a>
+            </div>
+            <div class="bio-cards">
+                <img src="./assets/scarlet witch.png" alt="scarlet witch"/>
+                <h3>Scarlet Okina-witch</h3><br>
+                <p>Master Astrologer & Tarot Reader</p><br>
+                <a href="#book-reading" class="button-bio">Talk to (Mot)Her</a>
+            </div>
+            <div class="bio-cards-2">
+                <img src="assets/monica rambeau.png" alt="monica rambeau"/>
+                <h3>Monicoffee</h3><br>
+                <p>Astro Pro-ton</p><br>
+                <a href="#book-reading" class="button-bio">Talk to Her</a>
+            </div>
+        </div>
+    </section>
+    <section id="book-reading">
+        <h2>Book a reading!</h2>
+        <div class="contact-section">
+            <div><img src="assets/reshot-icon-message-MGFL2H3C5Q.svg" alt="envelope with a heart in a speech bubble" class="envelope-heart"/></div>
+            <div id="form-show" class="contact-form">
+                <form action="https://api.web3forms.com/submit" method="POST" class="form-design">
+                    <input type="hidden" name="access_key" value="be6bf8cb-820e-40bf-bdfc-b34b488827f7"> <!--API Code-->
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" name="name" required><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" required><br>
+                    <label for="reading-type">Type of Reading: </label><br>
+                    <select id="reading-type" name="reading-type" class="reading-type-form">
+                        <option value="Birth Chart Reading">Birth Chart Reading</option>
+                        <option value="Birth Chart Reading">Tarot Card Reading</option>
+                        <option value="Birth Chart Reading">Birth Chart + Tarot Card Reading</option>
+                    </select><br>
+                    <label for="message">Ask us your questions!</label><br>
+                    <textarea name="message" required></textarea><br><br>
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <button type="submit" class="submit-button">Submit Form</button>
+                </form>
+            </div>
+        </div>
+    </section>
+<footer>
+    <p><a href="https://findmyflourish.com" target="_blank" class="reading-link">© Find My Flourish</p></a>
+</footer>
+</body>
+</html>
